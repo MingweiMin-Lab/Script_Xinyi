@@ -20,7 +20,7 @@ cmos = load('C:\Users\Jiasui\Documents\MATLAB\Jiasui\MCF10A_scatter plot\high-co
 %notice that dapi is the reference channel, all channels are aligned to
 %dapi.
 channelBiasFolder = 'C:\Users\Jiasui\Documents\MATLAB\Jiasui\MCF10A_scatter plot\';
-channelBias_list = dir('High_content_microscopy_channel_*_bias.mat');
+channelBias_list = dir(fullfile(channelBiasFolder, 'High_content_microscopy_channel_*_bias.mat'));
 for k = 1:numel(channelBias_list)
     channelBias = load([channelBiasFolder, channelBias_list(k).name]).tform; 
     if contains(channelBias_list(k).name, 'Alexa488')
@@ -32,6 +32,7 @@ for k = 1:numel(channelBias_list)
     end
 end
 
+
 %% load raw images   
 for wellF = 1:5
     for wellRow = 1:2
@@ -42,6 +43,7 @@ for wellF = 1:5
       % base on the channel used.
       Alexa = imwarp(Alexa,Alexa488_bias,'OutputView',imref2d(size(dapi)));
       % imshowpair(dapi,Alexa)
+      
 %% segment nuclei    
     segmethod='single';
     switch segmethod
