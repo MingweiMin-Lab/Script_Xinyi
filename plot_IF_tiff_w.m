@@ -1,10 +1,10 @@
 %%
 % currFolder = 'D:\文档\CCLA\experiment\Data\IF20201127wxy__2020-11-27T12_06_18-Measurement 1\Results\IF_intensity\IF_name_mat\1\'; 
-currFolder = 'D:\文档\CCLA\experiment\Data\IF20201127wxy__2020-11-27T12_06_18-Measurement 1\Results\IF_intensity\IF_name_mat\2\'; 
+currFolder = 'C:\Users\Jiasui\Documents\MATLAB\Jiasui\MCF10A_scatter plot\Result\'; 
 fileList = dir(fullfile(currFolder,'*.mat'));
 fileList = {fileList.name};
 
-savedir =  'D:\文档\CCLA\experiment\Data\IF20201127wxy__2020-11-27T12_06_18-Measurement 1\Results\IF_intensity\IF_plot_XY\';
+savedir =  'C:\Users\Jiasui\Documents\MATLAB\Jiasui\MCF10A_scatter plot\Scatter plot\';
 
 %%
 dapiResult=[];
